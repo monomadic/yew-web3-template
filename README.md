@@ -2,6 +2,8 @@
 
 This is a template for using Web3 browser extensions (like Metamask, etc) from yew, using rust and webassembly.
 
+An example of the code this project generates can be found [here](https://monomadic.github.io/yew-web3-template-example/).
+
 ## Running
 
 ```bash
