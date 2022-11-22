@@ -1,7 +1,7 @@
 use yew::prelude::*;
 use yew_ethereum_provider::{ConnectButton, UseEthereumHandle};
 
-use crate::components::{ThemeSwitch, Logo};
+use crate::components::{Logo, ThemeSwitch};
 
 #[function_component]
 pub fn Header() -> Html {
