@@ -2,4 +2,7 @@ target
 dist
 node_modules
 .DS_Store
-.env*
+.env
+.env.local
+.env.testnet
+.env.mainnet
