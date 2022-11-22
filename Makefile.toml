@@ -4,3 +4,8 @@
 env_files = [".env.local"]
 command = "trunk"
 args = ["serve"]
+
+[tasks.build]
+env_files = [".env"]
+command = "trunk"
+args = ["build"]
