@@ -1,0 +1,17 @@
+[package]
+name = "yew-web3-template"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+log = "0.4.17"
+yew = { git = "https://github.com/yewstack/yew", features = ["csr"] }
+web3 = { git = "https://github.com/monomadic/rust-web3", default-features = false, features = [
+  "http-rustls-tls",
+] }
+yew-ethereum-blockies = { path = "../../yew.workspace/yew-ethereum-blockies" }
+yew-ethereum-provider = { path = "../../yew.workspace/yew-ethereum-provider" }
+wasm-logger = "0.2.0"
+gloo-utils = "0.1.5"

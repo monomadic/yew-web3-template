@@ -1,0 +1,6 @@
+[config]
+
+[tasks.serve]
+env_files = [".env.local"]
+command = "trunk"
+args = ["serve"]
