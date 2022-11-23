@@ -6,8 +6,6 @@ An example of the code this project generates can be found [here](https://monoma
 
 ## Installing with `cargo-generate` (recommended)
 ```bash
-git clone --depth=1 https://github.com/monomadic/yew-web3-template
-cp .env.local.example .env.local
 cargo install cargo-generate
 cargo generate --git https://github.com/monomadic/yew-web3-template
 ```
@@ -15,7 +13,20 @@ cargo generate --git https://github.com/monomadic/yew-web3-template
 ## Installing with `git`
 ```bash
 git clone --depth=1 https://github.com/monomadic/yew-web3-template
-cp .env.local.example .env.local
+rm -rf .git && git init
+```
+
+## Running
+
+### `cargo-make` (recommended)
+```bash
 cargo install cargo-make
+cp .env.local.example .env.local
 cargo make serve
+```
+
+### without `cargo-make`
+```bash
+cp .env.local.example .env.local
+trunk serve
 ```
