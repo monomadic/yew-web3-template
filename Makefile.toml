@@ -12,3 +12,7 @@ install_crate = { crate_name = "trunk", binary = "trunk", test_arg = "--help" }
 command = "trunk"
 # toolchain = "stable"
 args = ["build", "--release"]
+
+[tasks.lint]
+command = "cargo"
+args = ["clippy"]

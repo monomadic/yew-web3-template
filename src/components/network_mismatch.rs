@@ -8,7 +8,7 @@ pub fn NetworkMismatch() -> Html {
         .expect("no UseEthereumHandle context found. you must wrap your components in an </>");
 
     let config: Config = Config::load();
-    let chain: Chain = config.clone().into();
+    let chain: Chain = config.into();
 
     let on_switch_network = {
         let ethereum = ethereum.clone();
@@ -17,7 +17,7 @@ pub fn NetworkMismatch() -> Html {
             let ethereum = ethereum.clone();
             let chain = chain.clone();
             spawn_local(async move {
-                let _ = ethereum.switch_chain_with_fallback(&chain).await.unwrap();
+                ethereum.switch_chain_with_fallback(&chain).await.unwrap();
             });
         })
     };

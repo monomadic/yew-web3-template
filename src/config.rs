@@ -30,18 +30,18 @@ impl Config {
     }
 }
 
-impl Into<yew_ethereum_provider::Chain> for Config {
-    fn into(self) -> yew_ethereum_provider::Chain {
+impl From<Config> for yew_ethereum_provider::Chain {
+    fn from(config: Config) -> Self {
         yew_ethereum_provider::Chain {
-            chain_id: self.chain_id, // hex
-            chain_name: self.chain_name,
-            rpc_urls: [self.rpc_url.into()],
+            chain_id: config.chain_id, // hex
+            chain_name: config.chain_name,
+            rpc_urls: [config.rpc_url],
             native_currency: yew_ethereum_provider::BaseCurrency {
-                decimals: self.base_currency_decimals,
-                name: self.base_currency_name,
-                symbol: self.base_currency_symbol,
+                decimals: config.base_currency_decimals,
+                name: config.base_currency_name,
+                symbol: config.base_currency_symbol,
             },
-            block_explorer_urls: Some([self.block_explorer_url]),
+            block_explorer_urls: Some([config.block_explorer_url]),
         }
     }
 }
