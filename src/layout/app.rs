@@ -1,7 +1,8 @@
+use yew::prelude::*;
+use yew_ethereum_provider::EthereumContextProvider;
+
 use super::header::Header;
 use crate::components::NetworkMismatch;
-use yew::prelude::*;
-use yew_ethereum_provider::{EthereumContextProvider, UseEthereumHandle};
 
 #[function_component]
 pub(crate) fn App() -> Html {
